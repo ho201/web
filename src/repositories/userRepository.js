@@ -1,4 +1,4 @@
-import { db } from "../db/db.js";
+import { db } from "../Database/db.js";
 
 export const UserRepo = {
     

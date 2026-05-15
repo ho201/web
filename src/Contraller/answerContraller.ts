@@ -4,13 +4,8 @@ import { AnswerRepo } from "../repositories/answerRepository.js";
 export const AnswerController = {
 
     async submitAnswer(req: Request, res: Response) {
-
         try {
-            const {
-                question_id,
-                answer_text,
-                session_id
-            } = req.body;
+            const {question_id,answer_text,session_id} = req.body;
 
             const studentId = (req as any).user.id;
 
@@ -26,8 +21,8 @@ export const AnswerController = {
                 answerId
             });
 
-        } catch (err: any) {
-
+        } 
+        catch (err: any) {
             res.status(500).json({
                 error: err.message
             });
